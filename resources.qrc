@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="/">
+    <file>resources/bitmap/BJTU.png</file>
+  </qresource>
+</RCC>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TBM智能辅助掘进系统</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QMdiArea" name="mdiArea">
+      <property name="tabsClosable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_General">
+    <property name="title">
+     <string>菜单</string>
+    </property>
+    <addaction name="action_Logout"/>
+   </widget>
+   <widget class="QMenu" name="menu_Apps">
+    <property name="title">
+     <string>功能</string>
+    </property>
+    <addaction name="action_Monitor_App"/>
+    <addaction name="action_MuckAnalysis_App"/>
+    <addaction name="action_VibrationAnalysis_App"/>
+    <addaction name="action_Optimization_App"/>
+    <addaction name="action_Query_App"/>
+    <addaction name="separator"/>
+    <addaction name="action_Console"/>
+   </widget>
+   <widget class="QMenu" name="menu_Help">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="action_Help"/>
+    <addaction name="action_About"/>
+   </widget>
+   <addaction name="menu_General"/>
+   <addaction name="menu_Apps"/>
+   <addaction name="menu_Help"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="floatable">
+    <bool>true</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_Monitor_App"/>
+   <addaction name="action_MuckAnalysis_App"/>
+   <addaction name="action_VibrationAnalysis_App"/>
+   <addaction name="action_Optimization_App"/>
+   <addaction name="action_Query_App"/>
+   <addaction name="action_Console"/>
+   <addaction name="action_Help"/>
+   <addaction name="action_Logout"/>
+  </widget>
+  <action name="action_Logout">
+   <property name="text">
+    <string>登出</string>
+   </property>
+  </action>
+  <action name="action_Monitor_App">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>掘进状态监控</string>
+   </property>
+   <property name="iconText">
+    <string>监控</string>
+   </property>
+   <property name="toolTip">
+    <string>掘进状态监控</string>
+   </property>
+   <property name="statusTip">
+    <string>打开TBM掘进状态监控窗口</string>
+   </property>
+  </action>
+  <action name="action_MuckAnalysis_App">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>渣土图像分析</string>
+   </property>
+   <property name="iconText">
+    <string>渣土</string>
+   </property>
+   <property name="toolTip">
+    <string>渣土图像分析</string>
+   </property>
+   <property name="statusTip">
+    <string>打开TBM渣土分析组件</string>
+   </property>
+  </action>
+  <action name="action_VibrationAnalysis_App">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>刀盘振动分析</string>
+   </property>
+   <property name="iconText">
+    <string>振动</string>
+   </property>
+   <property name="toolTip">
+    <string>刀盘振动分析</string>
+   </property>
+   <property name="statusTip">
+    <string>打开TBM刀盘振动分析组件</string>
+   </property>
+  </action>
+  <action name="action_Optimization_App">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>掘进参数优化</string>
+   </property>
+   <property name="iconText">
+    <string>优化</string>
+   </property>
+   <property name="toolTip">
+    <string>掘进参数优化</string>
+   </property>
+   <property name="statusTip">
+    <string>打开TBM掘进参数优化组件</string>
+   </property>
+  </action>
+  <action name="action_Query_App">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>数据查询</string>
+   </property>
+   <property name="iconText">
+    <string>查询</string>
+   </property>
+   <property name="toolTip">
+    <string>数据查询</string>
+   </property>
+   <property name="statusTip">
+    <string>打开数据查询窗口</string>
+   </property>
+  </action>
+  <action name="action_Help">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>帮助</string>
+   </property>
+   <property name="toolTip">
+    <string>帮助</string>
+   </property>
+  </action>
+  <action name="action_About">
+   <property name="text">
+    <string>关于</string>
+   </property>
+   <property name="toolTip">
+    <string>关于</string>
+   </property>
+   <property name="statusTip">
+    <string>关于TBM智能辅助掘进系统</string>
+   </property>
+  </action>
+  <action name="action_Console">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>控制台</string>
+   </property>
+   <property name="iconText">
+    <string>终端</string>
+   </property>
+   <property name="toolTip">
+    <string>控制台</string>
+   </property>
+   <property name="statusTip">
+    <string>打开控制台</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
